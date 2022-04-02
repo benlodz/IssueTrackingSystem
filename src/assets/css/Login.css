@@ -1,0 +1,30 @@
+.container-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 500px;
+    min-height: 500px;
+
+}
+
+.container-2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.container-3 {
+    display: flex;
+    flex-direction: column;
+}
+
+.p-button {
+    min-width: 300px;
+    margin: 20px !important;
+}
+
+.p-inputtext {
+    min-width: 300px;
+    margin: 20px !important;
+}
+
