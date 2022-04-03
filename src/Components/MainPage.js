@@ -19,7 +19,6 @@ function MainPage() {
             <h1>Issue Tracking System</h1>
             <div className="container">
                 <Button label="Login" onClick={routeChange}/>
-                <Button label="Password" />
             </div>
         </div>
     );

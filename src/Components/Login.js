@@ -4,6 +4,7 @@ import baruch_logo from "../assets/icons/Baruch-College-Stacked-Logos/stacked-co
 import { Button } from "primereact/button";
 import { InputText } from "primereact/inputtext";
 import { useNavigate } from "react-router-dom";
+import {Password} from "primereact/password";
 
 function Login() {
   const [email, setEmail] = useState();
@@ -19,7 +20,7 @@ function Login() {
   function checkLoginInfo() {
     console.log(email);
     console.log(password);
-    if (email === "asoliyev@gmail.com" && password === "hello14") {
+    if (email === "student@baruchmail.cuny.edu" && password === "hello14") {
       setEmail("");
       setPassword("");
       routeChange();
@@ -48,7 +49,8 @@ function Login() {
           <label htmlFor="in-2" className="block">
             Password
           </label>
-          <InputText
+          <Password
+              feedback={false}
             id="in-2"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
