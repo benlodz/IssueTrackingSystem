@@ -12,10 +12,16 @@ function Login() {
   const [passed, setPassed] = useState(true);
 
   let navigate = useNavigate();
-  const routeChange = () => {
-    let path = "/userpage";
+  function routeChange(priv) {
+    if (priv === "student") {
+      var path = "/userpage";
+    } else if (priv === "admin") {
+      var path = "/adminpage";
+    }
     navigate(path);
-  };
+  }
+
+
 
   function checkLoginInfo() {
     console.log(email);
@@ -23,7 +29,11 @@ function Login() {
     if (email === "student@baruchmail.cuny.edu" && password === "hello14") {
       setEmail("");
       setPassword("");
-      routeChange();
+      routeChange("student");
+    } else if (email === "admin@baruchmail.cuny.edu" && password == "hello14") {
+      setEmail("");
+      setPassword("");
+      routeChange("admin");
     } else {
         setPassed(false);
     }
