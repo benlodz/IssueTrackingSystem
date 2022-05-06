@@ -4,6 +4,8 @@ import { DataTable } from 'primereact/datatable';
 import baruch_logo from "../assets/icons/Baruch-College-Stacked-Logos/stacked-color.jpg";
 import { Column } from 'primereact/column';
 import issuefile from "../assets/data.json"
+import { useNavigate} from "react-router-dom";
+import {Button} from "primereact/button";
 
 
 const init = initialState => initialState;
