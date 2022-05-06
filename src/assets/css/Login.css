@@ -8,7 +8,25 @@
 
 }
 
+.reset-1 {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 500px;
+    min-height: 500px;
+
+}
+.reset-button {
+    display: none;
+}
+
 .container-2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.reset-2 {
     display: flex;
     flex-direction: column;
 }

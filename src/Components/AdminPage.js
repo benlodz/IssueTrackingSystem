@@ -4,6 +4,8 @@ import { DataTable } from 'primereact/datatable';
 import baruch_logo from "../assets/icons/Baruch-College-Stacked-Logos/stacked-color.jpg";
 import { Column } from 'primereact/column';
 import issuefile from "../assets/data.json"
+import { useNavigate} from "react-router-dom";
+import {Button} from "primereact/button";
 
 
 const init = initialState => initialState;
@@ -43,10 +45,10 @@ export const AdminPage = () => {
                 </div>
             </div>
             <DataTable value={results}>
-                <Column field="id" header="ID" />
-                <Column field="category" header="Category" />
-                <Column field="priority" header="Priority" />
-                <Column field="status" header="Status"  />
+                <Column field="id" header="ID"  sortBy="#{id}" sortable />
+                <Column field="category" header="Category" sortBy="#{category}" sortable />
+                <Column field="priority" header="Priority" sortBy="#{priority}" sortable />
+                <Column field="status" header="Status"  sortBy="#{status}" sortable />
             </DataTable>
         </div>
     );
