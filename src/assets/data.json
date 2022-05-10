@@ -1,8 +1,0 @@
-{
-  "data": [
-    {"id": "1", "category": "security", "priority" : "high", "status":"closed"},
-    {"id": "2", "category": "misc", "priority" : "low", "status":"open"},
-    {"id": "3", "category": "ui", "priority" : "medium", "status":"open"}
-
-  ]
-}
