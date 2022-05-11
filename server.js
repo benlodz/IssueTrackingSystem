@@ -6,6 +6,8 @@ const app = express();
 const port = 3002;
 
 app.use('assets', express.static(path.join(__dirname, "./client/src/assets")));
+app.use(express.json());
+
 
 app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
@@ -34,17 +36,17 @@ app.post("/ticket", (req, res) => {
             "status":""
         }
 
-        console.log("REQ: " + req);
 
-        /*
+        console.log("REQ: " + req.body.id);
+
         newIssue.id = req.body.id;
+
         newIssue.category = req.body.category;
         newIssue.priority = req.body.priority;
         newIssue.status = req.body.status;
-        */
 
         // add it to the existing file content
-        // obj.data.push(newIssue);
+        obj.data.push(newIssue);
 
         // update the file 
         let newData = JSON.stringify(obj);

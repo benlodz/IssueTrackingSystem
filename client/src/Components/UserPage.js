@@ -33,6 +33,8 @@ function UserPage() {
       headers: {"Content-Type": "application/json"},
       body: JSON.stringify(newIssue)
     };
+
+    console.log(requestOptions.body);
     fetch("http://localhost:3002/ticket", requestOptions)
     .then(respond => {console.log(respond)}).catch(err => {
       console.log(err);
